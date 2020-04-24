@@ -1,6 +1,6 @@
 let routes = [
     {
-        path:'',
+        path:'/',
         name:'home',
         redirect:()=>import('../../view/A.vue')
     },

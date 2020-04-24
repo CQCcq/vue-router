@@ -2,6 +2,9 @@
     <div>你好{{count}}
         <div>获取{{first}}</div>
         <button @click="getCount">计算</button>
+        <router-link to="/B">跳转B页面</router-link>
+        <router-link to="/B/C">跳转C页面</router-link>
+        <router-view></router-view>
     </div>
 </template>
 
@@ -12,7 +15,7 @@ import { mapState } from 'vuex'
 export default {
     data(){
         return{
-            // count:0
+            count:0
         }
     },
     computed:{
@@ -23,12 +26,12 @@ export default {
         //     console.log('为什么',val);
         //     return store.state.count
         // }
-        ...mapState({
-           count:(state)=>{
-               console.log('王八蛋',state);
-               return state.count;
-           }
-        })
+        // ...mapState({
+        //    count:(state)=>{
+        //        console.log('王八蛋',state);
+        //        return state.count;
+        //    }
+        // })
     },
     methods:{
         getCount(){
